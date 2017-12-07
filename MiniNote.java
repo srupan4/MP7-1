@@ -347,7 +347,7 @@ public class MiniNote extends JFrame implements ActionListener  {
 	               strB = str4;
 	            }
                                 
-	            if (up.isSelected())         //向上搜索
+	            if (up.isSelected())         //
 	            {           
 	                if (textArea.getSelectedText() == null)    
 	                {
@@ -358,7 +358,7 @@ public class MiniNote extends JFrame implements ActionListener  {
 	                    a = strA.lastIndexOf(strB, FindStartPos- findText.getText().length() - 1);
 	                }
 	            }
-	            else   //向下搜索
+	            else   //
 	            {
 	                if (textArea.getSelectedText() == null) 
 	                {
@@ -390,19 +390,19 @@ public class MiniNote extends JFrame implements ActionListener  {
 	             {
 	                if (replaceCount == 0)
 	                {
-	             JOptionPane.showMessageDialog(findDialog,"找不到您查找的内容!", "记事本",JOptionPane.INFORMATION_MESSAGE);
+	             JOptionPane.showMessageDialog(findDialog,"Not Found!", "MiniNote",JOptionPane.INFORMATION_MESSAGE);
 	                } 
 	               else
 	                {
-	                     JOptionPane.showMessageDialog(findDialog, "成功替换"+ replaceCount + "个匹配内容!", "替换成功",JOptionPane.INFORMATION_MESSAGE);
+	                     JOptionPane.showMessageDialog(findDialog, "Replace successfully"+ replaceCount + "Not", "Done",JOptionPane.INFORMATION_MESSAGE);
 	                }
 	             }
-	             if (replaceText.getText().length() == 0&& textArea.getSelectedText() != null)   //用空字符代替选定内容
+	             if (replaceText.getText().length() == 0&& textArea.getSelectedText() != null) 
 	             {
 	    	         textArea.replaceSelection("");
 	                 replaceCount++;
 	             }
-                 if (replaceText.getText().length() > 0&& textArea.getSelectedText() != null)   //用指定字符代替选定内容
+                 if (replaceText.getText().length() > 0&& textArea.getSelectedText() != null) 
                  {
 	    	         textArea.replaceSelection(replaceText.getText());
 	                 replaceCount++;
@@ -411,7 +411,7 @@ public class MiniNote extends JFrame implements ActionListener  {
 	       }
 	   }); 
 
-	   //"查找下一个"按钮事件处理
+
 	   searchNext.addActionListener(new ActionListener() {
 		   
 	    public void actionPerformed(ActionEvent e) {
@@ -423,18 +423,18 @@ public class MiniNote extends JFrame implements ActionListener  {
 	     str3 = findText.getText();
 	     str4 = str3.toLowerCase();
 
-	     //"区分大小写"的CheckBox被选中
-	     if (matchcase.isSelected())   //区分大小写
+	  
+	     if (matchcase.isSelected())  
 	     {
 	       strA = str1;
 	       strB = str3;
 	     }  
-	     else      //不区分大小写   
+	     else     
 	     {
 	       strA = str2;
 	       strB = str4;
 	     }
-	     if (up.isSelected())  //向上搜索
+	     if (up.isSelected())  
 	     {
 	        if (textArea.getSelectedText() == null) 
 	        {
