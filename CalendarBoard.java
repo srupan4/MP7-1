@@ -46,7 +46,7 @@ public class CalendarBoard extends JFrame{
               
             @Override  
             public void windowOpened(WindowEvent e) {  
-                requestFocus();  
+                requestFocus();  xx
             }  
               
         });  
